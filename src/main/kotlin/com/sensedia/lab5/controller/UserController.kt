@@ -11,6 +11,7 @@ class UserController @Autowired constructor(private val userService: UserService
 
     @RequestMapping(value = ["/me"])
     fun getCurrentUser(): ModelAndView {
-        TODO("TODO 9 - Implementar o método getCurrentUser o controller para mandar os dados cadastrados no Facebook.")
+        var model = mapOf("user" to userService.getCurrentUser())
+        return ModelAndView("user", model)
     }
 }

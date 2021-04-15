@@ -1,1 +1,11 @@
-<TODO>TODO 8 - Configurar a página para exibição do nome e email recuperados do usuário atual do Facebook.</TODO>
+<!DOCTYPE html>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<html>
+    <head>
+        <title>Minha aplica&ccedil;&atilde;o</title>
+    </head>
+    <body>
+        <h1>Nome: <c:out value="${user.name}"/></h1>
+        <h1>Email: <c:out value="${user.email}"/></h1>
+    </body>
+</html>

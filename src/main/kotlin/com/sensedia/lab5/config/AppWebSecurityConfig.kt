@@ -10,7 +10,10 @@ import org.springframework.context.annotation.Configuration
 open class AppWebSecurityConfig: WebSecurityConfigurerAdapter() {
 
     override fun configure(http: HttpSecurity) {
-        TODO("TODO 3 - Criar a configuração de segurança: acesso total para o path '/' e restrito para os demais, ou seja, tem que ser autenticado pelo login do Facebook.")
+        http.authorizeRequests()
+            .antMatchers("/").permitAll()
+            .anyRequest().authenticated()
+            .and().oauth2Login()
     }
 
 }

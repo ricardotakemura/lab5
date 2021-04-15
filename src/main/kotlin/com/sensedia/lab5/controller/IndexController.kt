@@ -9,6 +9,6 @@ class IndexController {
 
     @RequestMapping(value = ["/"])
     fun index(): ModelAndView {
-        TODO("TODO 7 - Implementar o método index no controller para redirecionar para a página WEB-INF/index.jsp")
+        return ModelAndView("index")
     }
 }

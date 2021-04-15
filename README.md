@@ -31,7 +31,7 @@ return viewResolver
 http.authorizeRequests()   
     .antMatchers("/").permitAll()
     .anyRequest().authenticated()
-    .and().oauth2Login();
+    .and().oauth2Login()
 ```
 
 ## TODO 4 - Criar classe de dados User.
